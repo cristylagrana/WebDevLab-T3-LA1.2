@@ -1,0 +1,108 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #000;
+  color: #222;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background: #000;
+  color: #fff;
+}
+
+.logo {
+  width: 50px;
+  height: 40px;
+}
+
+.nav-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  margin-left: 25px;
+  font-weight: bold;
+  font-size: 1.1em;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #aaa;
+}
+
+.user-avatar {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+}
+
+main {
+  background: #eee;
+  border-radius: 30px;
+  margin: 30px;
+  padding: 30px;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  background: #fff;
+  border-radius: 15px;
+  padding: 10px 20px;
+  margin-bottom: 30px;
+}
+
+.search-bar input {
+  flex: 1;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  background: transparent;
+}
+
+.search-icon {
+  font-size: 18px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.book-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 96px; /* 1 inch = 96px */
+  justify-items: center;
+}
+
+.book-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 150px;
+  width: 100%;
+}
+
+.book-item img {
+ width: 120px;           /* narrower width */
+  height: 180px;          /* taller height for rectangle */
+  object-fit: cover;      /* fill the box without stretching */
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  margin-bottom: 10px;
+}
+
+.book-item h4 {
+  font-size: 0.9em;
+  color: #333;
+  margin: 0;
+  line-height: 1.3;
+}

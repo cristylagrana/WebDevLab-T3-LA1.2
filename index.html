@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ReadScape</title>
+  <link rel="stylesheet" href="css/newsfeed.css" />
+  <link rel="stylesheet" href="css/post_style.css" />
+  <link rel="stylesheet" href="css/modal.css">
+</head>
+<body>
+<header>
+  <img src="FIGMA_ASSETS/ReadScape.png" alt="Logo" class="logo" />
+  <div class="nav-user-wrapper">
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="explore.html">Explore</a>
+      <a href="bookreviews.html">Book Reviews</a>
+      <a href="library.html">Library</a>
+      <a href="logout.html">Logout</a>
+      <a href=""><img src="FIGMA_ASSETS/tyy.jpg" alt="User" class="user-avatar" /></a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <!-- Post Form -->
+  <form method="POST" enctype="multipart/form-data" id="postForm" class="post-box">
+    <img src="FIGMA_ASSETS/p2.jpg" class="user-avatar" alt="User" />
+    <input type="text" name="content" id="postContent" placeholder="Write a Post?" autocomplete="off" />
+    <input type="file" name="image" id="imageInput" style="display:none" accept="image/*" />
+
+    <!-- REQUIRED hidden fields -->
+    <input type="hidden" name="user_id" value="1">
+    <input type="hidden" name="username" value="TyyWrites">
+    <input type="hidden" name="avatar" value="FIGMA_ASSETS/tyy.jpg">
+
+    <div class="post-buttons">
+      <button type="button" id="pickImageBtn" title="Pick Image">＋</button>
+      <button type="submit" title="Post">📖</button>
+      <button type="button" id="clearBtn" title="Clear">ⓧ</button>
+    </div>
+  </form>
+
+  <!-- Existing Hardcoded Posts -->
+  <div class="post">
+    <div class="post-user">
+      <img src="FIGMA_ASSETS/p1.jpg" class="user-avatar" alt="Mia">
+      <span>@MiaLoveBooks</span>
+    </div>
+    <div class="post-content">
+      <div class="post-images"><img src="FIGMA_ASSETS/s1.jpg" alt=""></div>
+      <div class="post-text">
+        <p>"Some days are for escaping into the world of books,<br> and other days are for tackling that never-ending study list.<br>How do you manage your reading and study time?”<br>
+        <a href="dashboard.php?tag=Books">#Books</a> 
+        <a href="dashboard.php?tag=StudyTime">#ReadScape</a>
+        <div class="post-stats">
+          <span>♡ 10k likes</span>
+          <span>💬 15k comments</span>
+          <span>🔁 20k shares</span>
+          <span>💾 15k saves</span>
+          <button class="viewBtn" onclick="viewPost(this)">👁️ View Post</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- More Hardcoded Posts -->
+  <div class="post">
+    <div class="post-user">
+      <img src="FIGMA_ASSETS/p3.jpg" class="user-avatar" alt="Sophie">
+      <span>@Sophie_bookworm</span>
+    </div>
+    <div class="post-content">
+      <div class="post-images"><img src="FIGMA_ASSETS/s3.jpg" alt=""></div>
+      <div class="post-text">
+        <p>"Journaling, planning, and a little bit of creative chaos—<br>it's all part of the process... What’s your favorite way to stay organized?”<br>
+        <a href="dashboard.php?tag=Books">#Books</a> 
+        <a href="dashboard.php?tag=StudyTime">#ReadScape</a>
+        </p>
+        <div class="post-stats">
+          <span>♡ 9k likes</span>
+          <span>💬 13k comments</span>
+          <span>🔁 15k shares</span>
+          <span>💾 13k saves</span>
+          <button class="viewBtn" onclick="viewPost(this)">👁️ View Post</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Post 3 -->
+<div class="post">
+  <div class="post-user">
+    <img src="FIGMA_ASSETS/aids.jpg" class="user-avatar" alt="Sophie">
+    <span>@LitWithAdrianne</span>
+  </div>
+  <div class="post-content">
+    <div class="post-images">
+      <img src="FIGMA_ASSETS/post.jpg" alt="">
+    </div>
+    <div class="post-text">
+      <p>
+       Hidden in shadows and stories, she slipped between shelves like a ghost.<br> Yet the books always remembered her.<br>
+       <a href="dashboard.php?tag=Books">#Books</a> 
+       <a href="dashboard.php?tag=StudyTime">#StudyTime</a>
+      </p>
+      <div class="post-stats">
+        <span>♡ 9k likes</span>
+        <span>💬 13k comments</span>
+        <span>🔁 15k shares</span>
+        <span>💾 13k saves</span>
+        <button class="viewBtn" onclick="viewPost(this)">👁️ View Post</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+</body>
+</html>

@@ -1,0 +1,110 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #000;
+  color: #222;
+}
+
+header {
+  background: #000;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 30px;
+}
+
+.logo {
+  width: 50px;
+}
+
+/* Wrap nav + avatar in a flex row */
+.nav-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+nav a {
+  margin: 0 15px;
+  font-weight: bold;
+  text-decoration: none;
+  color: white;
+}
+
+.user-avatar {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+}
+
+main {
+  background: #eee;
+  border-radius: 30px;
+  margin: 30px;
+  padding: 30px;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  background: #fff;
+  border-radius: 15px;
+  padding: 10px 20px;
+  margin-bottom: 30px;
+}
+
+.search-bar input {
+  flex: 1;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  background: transparent;
+}
+
+.search-icon {
+  font-size: 18px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.book-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+}
+
+.book-item {
+  display: flex;
+  gap: 15px;
+  background: #fff;
+  border-radius: 15px;
+  padding: 15px;
+  align-items: flex-start;
+}
+
+.book-item img {
+  width: 80px;
+  height: 110px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.book-info h3 {
+  margin: 0;
+  font-size: 16px;
+}
+
+.book-info h3 span {
+  font-weight: normal;
+  font-size: 14px;
+  display: block;
+  margin-top: 3px;
+}
+
+.book-info p {
+  font-size: 14px;
+  margin: 10px 0 0;
+  line-height: 1.4;
+}
